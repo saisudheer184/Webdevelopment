@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You're Invited!</title>
+  <style>
+    body {
+      background: url('https://png.pngtree.com/thumb_back/fh260/background/20240415/pngtree-happy-birthday-background-image_15656139.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+    }
+
+    /* Adding a semi-transparent overlay behind the text */
+    .content {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 40px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin: 10px 0;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 12px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+
+    #countdown {
+      font-size: 1.3rem;
+      color: #d32f2f;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #ff4081;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #e91e63;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main content wrapped with a semi-transparent background -->
+  <div class="content">
+    <h1>🎂 You're Invited!</h1>
+    <p>Join us for a fun-filled birthday celebration!</p>
+    <p><strong>Date:</strong> May 10, 2025<br>
+       <strong>Time:</strong> 7:00 PM<br>
+       <strong>Location:</strong> 5th line,Gandhi peta, chilakaluripet </p>
+
+    <img src="IMG_20250503_124023_998.webp" alt="Birthday Party">
+
+    <!-- Countdown Timer -->
+    <div id="countdown"></div>
+
+    <!-- RSVP Form -->
+    <p>Enter your name to RSVP:</p>
+    <input type="text" id="guestName" placeholder="Your name here">
+    <br>
+    <button onclick="showInvite()">RSVP Now</button>
+  </div>
+
+  <!-- Optional background music -->
+  <!-- <audio autoplay loop>
+    <source src="your-birthday-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio> -->
+
+  <script>
+    function showInvite() {
+      const name = document.getElementById('guestName').value.trim();
+      if (name) {
+        alert(`You're officially invited to the party, ${name}! 🎉 Don't forget your party hat!`);
+      } else {
+        alert("Please enter your name to RSVP!");
+      }
+    }
+
+    // Countdown Timer
+    const eventDate = new Date("May 10, 2025 16:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+
+    const timer = setInterval(function () {
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+
+      if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML =
+          `🎉 Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        clearInterval(timer);
+        countdownElement.innerHTML = "🎈 The party has started!";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
