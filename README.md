@@ -8,8 +8,8 @@ Web Development Task1 basic HTML , CSS , JS
 **Task3**                                                            
 1.1.web pages look great on mobile, tablet, and desktop                      
 2.Image Carousel Using JavaScript                                   
-3.Fetch Data from an API Using JavaScript
-Task4                                        
-1.Portfolio
-2.To DO List
-3.Sort and Filter
+3.Fetch Data from an API Using JavaScript                                            
+#Task4                                                                                    
+1.Portfolio                                                  
+2.To DO List                                                                                                    
+3.Sort and Filter                                                                                                        
