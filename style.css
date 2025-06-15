@@ -1,75 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-}
-nav {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
+#product-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+
+.product-card {
+  width: 200px;
+  flex: 1 1 200px;
 }
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-.hero {
-  padding: 2rem;
-  text-align: center;
-}
-.about, .projects, .contact {
-  padding: 2rem;
-}
-.project-card {
-  background: white;
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid #ddd;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-form input, form textarea {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-form button {
-  padding: 0.5rem;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: white;
-}
+
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+  .product-card {
+    width: 100%;
+    text-align: center;
   }
-}
-.hero-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
 }
